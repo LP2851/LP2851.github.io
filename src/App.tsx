@@ -1,25 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import HomePage from "./routes/HomePage";
+import Layout from "./containers/Layout";
+import {PageNotFound, WIPPage} from "./routes/empty-pages"
 
-function App() {
+const App = () => {
+
+    const allRoutes = [
+        {path: "", element: <HomePage/>, onNavBar: true, navName: "Home"},
+        {path: "projects", element: <WIPPage/>, onNavBar: true, navName: "My Projects"},
+        {path: "about", element: <WIPPage/>, onNavBar: true, navName: "About Me"},
+        {path: "*", element: <PageNotFound/>, onNavBar: false},
+    ]
+
+    const getRoutes = () => {
+        return allRoutes.map(r =>
+            <Route path={`/${r.path}`} element={r.element}/>
+        )
+    }
+
+    const getNavBarRoutes = () => {
+        return allRoutes
+            .filter(r => r.onNavBar && r.navName)
+            .map(r => {
+                return {path: r.path, name: r.navName}
+            });
+    }
+
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
-        </div>
+        <BrowserRouter>
+            <div className="App">
+                <Routes>
+                    <Route path="/" element={<Layout navRoutes={getNavBarRoutes()}/>}>
+                        <Route index element={<HomePage/>}/>
+                        {getRoutes()}
+                    </Route>
+                </Routes>
+            </div>
+        </BrowserRouter>
     );
 }
 
