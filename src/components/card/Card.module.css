@@ -1,0 +1,28 @@
+.card {
+    border-radius: 8px;
+    box-shadow: 0 0 8px #ccc;
+    color: #253b56;
+    margin: 12px 0;
+}
+
+.cardContentDefault {
+    padding: 4px 16px 20px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 12px 0 0 0;
+}
+
+.content {
+    font-size: 14px;
+    margin: 8px 0 0 0;
+}

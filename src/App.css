@@ -1,5 +1,12 @@
 .App {
+    --nice-orange: #f58442;
     text-align: center;
+    /*background-color: #282c34;*/
+    min-height: 100vh;
+    display: flex;
+    /*color: white;*/
+    color: #333;
+    flex-flow: column;
 }
 
 .App-logo {
