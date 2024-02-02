@@ -2,7 +2,6 @@ import React, { memo } from "react";
 import { Post } from "../../components/post/Post";
 import { ContentTypes, PostData } from "../../helpers/PostData";
 import "./Posts.css";
-import {useTheme} from "../../context/theme/ThemeContext";
 
 
 const POSTS: PostData[] = [
@@ -11,22 +10,12 @@ const POSTS: PostData[] = [
     content: {
       type: ContentTypes.DEFAULT,
       data: {
-        textContent: "Some test data",
+        textContent: "Hello there! This is a testing post. This website is a WIP- more coming soon.",
       }
     },
     tags: [],
     controls: {},
-  },
-  {
-    title: "Hello World!",
-    content: {
-      type: ContentTypes.DEFAULT,
-      data: {
-        textContent: "Some test data",
-      }
-    },
-    tags: [],
-    controls: {},
+    date: "2nd February 2024"
   },
 ]
 

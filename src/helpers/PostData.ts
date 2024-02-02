@@ -5,6 +5,7 @@ export type PostData = {
   controls: {
     iFrameVideo?: string;
   };
+  date: string;
 };
 
 export enum ContentTypes {

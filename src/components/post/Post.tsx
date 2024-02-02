@@ -11,7 +11,11 @@ type Props = {
 
 const PostComponent = ({ post: props }: Props) => {
   return <Card>
-    <h3 className="post-title">{ props.title }</h3>
+    <div className="post-header">
+      <h3 className="post-title">{props.title}</h3>
+      <p className="post-date">{props.date}</p>
+    </div>
+
     {
       props.tags.length > 0 && <TagsBar tags={props.tags} />
     }

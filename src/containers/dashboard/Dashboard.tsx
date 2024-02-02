@@ -10,7 +10,7 @@ const DashboardContainer = () => {
   return <div className="dashboard-container">
     <div className="dashboard-grid">
       <Link className="dashboard-link-card" to="/posts">
-        <div className="dashboard-link-text">Notify</div>
+        <div className="dashboard-link-text">Blog</div>
         <FontAwesomeIcon icon="message" className="dashboard-link-icon" />
       </Link>
       <Link className="dashboard-link-card" to="/">

@@ -1,3 +1,8 @@
 .post-text-content {
-    margin: 1rem 0;
+    border-left: 2px white solid;
+    padding-left: 0.5rem;
+    text-align: left;
+    padding-top: 0.25rem;
+    padding-bottom: 0.2rem;
+    margin: 1rem 0 1rem 2rem;
 }
