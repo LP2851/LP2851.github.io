@@ -1,0 +1,27 @@
+.theme-light {
+    --app-primary-background: white;
+    --app-secondary-background: white;
+
+    --app-header-background: #1a1f26;
+
+    --app-card-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    --app-card-box-shadow-hover: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+    --app-title-font-shadow: teal;
+
+    --button-background: var(--app-primary-background);
+    --button-hover-background: #61dafb;
+
+    --text-primary-color: #1a1f26;
+    --text-alt-color: #1a1f26;
+    --text-link-color: #61dafb;
+    --text-shadow-color: transparent;
+
+    --text-header-color: white;
+
+    --text-negative-color: tomato;
+    --text-positive-color: #61dafb;
+
+    --icon-default-color: teal;
+
+}

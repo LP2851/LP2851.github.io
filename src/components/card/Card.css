@@ -1,0 +1,16 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--app-secondary-background);
+    border-radius: 8px;
+    min-height: 10rem;
+    align-items: flex-start;
+    padding: 1rem;
+    /*margin: var(--side-margins) 0;*/
+    margin-bottom: var(--side-margins);
+    box-shadow: var(--app-card-box-shadow);
+
+    &:hover {
+        box-shadow: var(--app-card-box-shadow-hover);
+    }
+}

@@ -1,45 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
 .App {
-    --nice-orange: #f58442;
-    text-align: center;
-    /*background-color: #282c34;*/
-    min-height: 100vh;
-    display: flex;
-    /*color: white;*/
-    color: #333;
-    flex-flow: column;
+  /*--app-background: #282c34;*/
+  /*--card-background: #1a1f26;*/
+  --side-margins: 2rem;
+  --app-title-font: "Black Ops One";
+  /*--app-title-font-shadow: teal;*/
+  /*--button-hover-background: #61dafb;*/
+  --header-height: 5.75rem;
+
+  text-align: center;
+  background-color: var(--app-primary-background);
+  color: var(--text-primary-color);
+  max-width: 100vw;
 }
 
 .App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+  height: 40vmin;
+  pointer-events: none;
 }
 
 .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+  background-color: var(--app-header-background);
+  width: 100%;
+  padding: calc(var(--side-margins) / 2) 0 calc(var(--side-margins) / 2) 2rem;
+  display: inline-flex;
+  color: var(--text-header-color);
+  max-height: var(--header-height);
+}
+
+.App-name {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+
+  color: var(--text-header-color);
+  font-family: var(--app-title-font), serif;
+  font-size: xxx-large;
+  text-decoration: none;
+  text-shadow: 0.5rem 0.5rem var(--app-title-font-shadow);
+
+  transition: text-shadow 100ms;
+
+  &:hover {
+    text-shadow: -0.5rem -0.5rem var(--app-title-font-shadow);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* Desktop */
+  .App-route {
+    width: calc(100vw - var(--side-margins));
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Phone */
+  .App-route {
+    width: 100%;
+  }
+
+  .card {
+    margin: calc(var(--side-margins) / 2) 0;
+  }
+}
+
+.App-route {
+  margin-top: var(--side-margins);
+  margin-left: var(--side-margins);
+  /*margin-right: var(--side-margins);*/
+}
+
+.page-title {
+  margin: 0;
+  height: 100%;
+  padding-top: var(--margins-size);
+
+  font-family: var(--app-title-font);
+  text-shadow: var(--text-shadow-distance) var(--text-shadow-distance)  var(--app-title-font-shadow);
+  text-transform: uppercase;
+}
+
+.App-container {
+  background-color: var(--app-primary-background);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--text-primary-color);
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  color: var(--text-link-color);
 }
