@@ -16,7 +16,7 @@ const App = () => {
 
     const getRoutes = () => {
         return allRoutes.map(r =>
-            <Route path={`/${r.path}`} element={r.element}/>
+            <Route key={r.path} path={`/${r.path}`} element={r.element}/>
         )
     }
 

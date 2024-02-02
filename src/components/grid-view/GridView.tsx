@@ -10,7 +10,7 @@ interface GridViewProps {
 const getGridItems = (props: GridViewProps) => {
     if (!props.children)
         return [];
-    let gridItems: JSX.Element[] = [];
+    const gridItems: JSX.Element[] = [];
     props.children.forEach((item) => {
         gridItems.push(<div className={styles.gridItem}>{item}</div>)
     });
