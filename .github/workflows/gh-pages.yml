@@ -24,6 +24,14 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install Packages
         run: npm install
 
@@ -44,3 +52,4 @@ jobs:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           if: github.ref == 'refs/heads/main'
           publish-branch: gh-pages
+          publish-dir: ./build
