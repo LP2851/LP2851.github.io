@@ -50,8 +50,8 @@
 @media only screen and (min-width: 768px) {
   /* Desktop */
   .App-route {
-    width: calc(100vw - var(--side-margins));
-    margin-right: auto;
+    /*width: calc(100vw - var(--side-margins));*/
+    /*margin-right: auto;*/
   }
 }
 
@@ -63,12 +63,21 @@
 
   .card {
     margin: calc(var(--side-margins) / 2) 0;
+    min-height: auto;
+  }
+
+  .App-name {
+    font-size: xx-large;
+  }
+
+  .page-title {
+    font-size: xx-large;
   }
 }
 
 .App-route {
   margin-top: var(--side-margins);
-  margin-left: var(--side-margins);
+  /*margin-left: var(--side-margins);*/
   /*margin-right: var(--side-margins);*/
 }
 

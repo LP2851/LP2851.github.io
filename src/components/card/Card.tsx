@@ -4,7 +4,7 @@ import "./Card.css"
 type Props = any;
 
 const CardComponent = (props: PropsWithChildren<Props>) => {
-  return <div className="card" draggable={true}>
+  return <div className="card">
     { props.children }
   </div>;
 }
