@@ -1,45 +1,47 @@
 import React from 'react';
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { Dashboard } from "./containers/dashboard/Dashboard";
+import { BlogPosts } from "./containers/blog/BlogPosts";
 import './App.css';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import HomePage from "./routes/HomePage";
-import Layout from "./containers/Layout";
-import {PageNotFound, WIPPage} from "./routes/empty-pages"
+import {ThemeProvider} from "./context/theme/ThemeContext";
+
+type RouteConfig = {
+  path: string;
+  element?: JSX.Element;
+}
+
+const ROUTES: RouteConfig[] = [
+  {
+    path: "/",
+    element: <Dashboard />,
+  },
+  {
+    path: "/blog",
+    element: <BlogPosts />,
+  },
+];
 
 const App = () => {
-
-    const allRoutes = [
-        {path: "", element: <HomePage/>, onNavBar: true, navName: "Home"},
-        {path: "projects", element: <WIPPage/>, onNavBar: true, navName: "My Projects"},
-        {path: "about", element: <WIPPage/>, onNavBar: true, navName: "About Me"},
-        {path: "*", element: <PageNotFound/>, onNavBar: false},
-    ]
-
-    const getRoutes = () => {
-        return allRoutes.map(r =>
-            <Route key={r.path} path={`/${r.path}`} element={r.element}/>
-        )
-    }
-
-    const getNavBarRoutes = () => {
-        return allRoutes
-            .filter(r => r.onNavBar && r.navName)
-            .map(r => {
-                return {path: r.path, name: r.navName}
-            });
-    }
-
-    return (
-        <BrowserRouter>
-            <div className="App">
-                <Routes>
-                    <Route path="/" element={<Layout navRoutes={getNavBarRoutes()}/>}>
-                        <Route index element={<HomePage/>}/>
-                        {getRoutes()}
-                    </Route>
-                </Routes>
+  return (
+    <BrowserRouter>
+      <ThemeProvider>
+        <div className="App">
+          <div className="App-container">
+            <div className="App-header">
+              <Link to="/" className="App-name">LUCAS PHILLIPS</Link>
             </div>
-        </BrowserRouter>
-    );
+            <div className="App-route">
+              <Routes>
+                {
+                  ROUTES.map(route => <Route { ...route } />)
+                }
+              </Routes>
+            </div>
+          </div>
+        </div>
+      </ThemeProvider>
+    </BrowserRouter>
+  );
 }
 
 export default App;
