@@ -9,7 +9,7 @@ const DashboardContainer = () => {
 
   return <div className="dashboard-container">
     <div className="dashboard-grid">
-      <Link className="dashboard-link-card" to="/posts">
+      <Link className="dashboard-link-card" to="/blog">
         <div className="dashboard-link-text">Blog</div>
         <FontAwesomeIcon icon="message" className="dashboard-link-icon" />
       </Link>

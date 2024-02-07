@@ -1,10 +1,10 @@
 import React, { memo } from "react";
 import { Post } from "../../components/post/Post";
 import { ContentTypes, PostData } from "../../helpers/PostData";
-import "./Posts.css";
+import "./BlogPosts.css";
 
 
-const POSTS: PostData[] = [
+const BLOG_POSTS: PostData[] = [
   {
     title: "Hello World!",
     content: {
@@ -25,10 +25,10 @@ const PostsContainer = () => {
     <h2 className="page-title">Blog</h2>
     <div className="posts-container">
       {
-        POSTS.map((p) => <Post post={p}/>)
+        BLOG_POSTS.map((p) => <Post post={p}/>)
       }
     </div>
   </>
 }
 
-export const Posts = memo(PostsContainer);
+export const BlogPosts = memo(PostsContainer);
