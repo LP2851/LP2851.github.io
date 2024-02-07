@@ -14,7 +14,7 @@ const DashboardContainer = () => {
         <FontAwesomeIcon icon="message" className="dashboard-link-icon" />
       </Link>
       <Link className="dashboard-link-card" to="/">
-        <div className="dashboard-link-text">WIP</div>
+        <div className="dashboard-link-text">Projects (WIP)</div>
         <FontAwesomeIcon icon="cogs" className="dashboard-link-icon" />
       </Link>
       <Link className="dashboard-link-card" to="/">
