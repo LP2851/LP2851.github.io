@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Hello World!",
+    "content": {
+      "type": "DEFAULT",
+      "data": {
+        "textContent": "Hello there! This is a testing post. This website is a WIP- more coming soon."
+      }
+    },
+    "tags": [],
+    "date": "2024-02-02"
+  }
+]
