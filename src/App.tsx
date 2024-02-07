@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { HashRouter, Link, Route, Routes } from "react-router-dom";
 import { Dashboard } from "./containers/dashboard/Dashboard";
 import { BlogPosts } from "./containers/blog/BlogPosts";
 import './App.css';
@@ -23,7 +23,7 @@ const ROUTES: RouteConfig[] = [
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter >
       <ThemeProvider>
         <div className="App">
           <div className="App-container">
@@ -40,7 +40,7 @@ const App = () => {
           </div>
         </div>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
