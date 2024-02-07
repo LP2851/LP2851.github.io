@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { Dashboard } from "./containers/dashboard/Dashboard";
-import { Posts } from "./containers/posts/Posts";
+import { BlogPosts } from "./containers/blog/BlogPosts";
 import './App.css';
 import {ThemeProvider} from "./context/theme/ThemeContext";
 
@@ -16,8 +16,8 @@ const ROUTES: RouteConfig[] = [
     element: <Dashboard />,
   },
   {
-    path: "/posts",
-    element: <Posts />,
+    path: "/blog",
+    element: <BlogPosts />,
   },
 ];
 
