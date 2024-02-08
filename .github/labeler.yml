@@ -1,0 +1,10 @@
+data-change:
+  - changed-files:
+    - any-glob-to-any-file: public/data/**
+
+release:
+  - base-branch: 'main'
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file: '**/*.md'
