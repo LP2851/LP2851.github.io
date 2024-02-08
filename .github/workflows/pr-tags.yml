@@ -16,10 +16,10 @@ jobs:
       - name: Check for data changes
         id: data-check
         run: |
-          CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.event.after }})
+          CHANGED_FILES=$(git diff --name-only origin/main HEAD)
 
           # Check if specific files are modified
-          if echo "$CHANGED_FILES" | grep -qE 'public/data/**'; thegit 
+          if echo "$CHANGED_FILES" | grep -qE 'public/data/'; 
             echo "Folder changed: $CHANGED_FILES"
             echo "::set-output name=tag_triggered::true"
           else
