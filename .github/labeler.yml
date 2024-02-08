@@ -1,0 +1,3 @@
+data-change:
+  - changed-files:
+    - any-glob-to-any-file: public/data/**
