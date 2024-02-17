@@ -1,10 +1,11 @@
 import React, {memo, useEffect, useState} from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { Post } from "../../components/post/Post";
 import { PostData } from "../../helpers/PostData";
+import { PageContainer } from "../../components/page-container/PageContainer";
 import { fetchJsonData } from "../../helpers/DataReader";
 import "./BlogPosts.css";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faSpinner} from "@fortawesome/free-solid-svg-icons";
 
 const BLOG_DATA_LOCATION = "/data/blogs.json";
 
@@ -27,16 +28,12 @@ const PostsContainer = () => {
     fetchData();
   }, []);
 
-
-  return <>
-    <h2 className="page-title">Blog</h2>
-    <div className="posts-container">
-      { posts.length !== 0
-        ? posts.map((p) => <Post post={p}/>)
-        : <FontAwesomeIcon icon={faSpinner} spinPulse={true} fontSize="xxx-large" color="var(--app-title-font-shadow)" />
-      }
-    </div>
-  </>
+  return <PageContainer title="Blogs">
+    { posts.length !== 0
+      ? posts.map((p) => <Post post={p}/>)
+      : <FontAwesomeIcon icon={faSpinner} spinPulse={true} fontSize="xxx-large" color="var(--app-title-font-shadow)" />
+    }
+  </PageContainer>
 }
 
 export const BlogPosts = memo(PostsContainer);
