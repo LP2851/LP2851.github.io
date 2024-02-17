@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 .App {
   /*--app-background: #282c34;*/
@@ -9,6 +10,7 @@
   /*--button-hover-background: #61dafb;*/
   --header-height: 5.75rem;
 
+  font-family: "Montserrat", sans-serif;
   text-align: center;
   background-color: var(--app-primary-background);
   color: var(--text-primary-color);
