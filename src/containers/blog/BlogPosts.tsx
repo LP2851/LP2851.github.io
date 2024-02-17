@@ -1,9 +1,8 @@
 import React, {memo, useEffect, useState} from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { Post } from "../../components/post/Post";
-import { PostData } from "../../helpers/PostData";
+import { Spinner } from "../../components/spinner/Spinner";
 import { PageContainer } from "../../components/page-container/PageContainer";
+import { PostData } from "../../helpers/PostData";
 import { fetchJsonData } from "../../helpers/DataReader";
 import "./BlogPosts.css";
 
@@ -31,7 +30,7 @@ const PostsContainer = () => {
   return <PageContainer title="Blogs">
     { posts.length !== 0
       ? posts.map((p) => <Post post={p}/>)
-      : <FontAwesomeIcon icon={faSpinner} spinPulse={true} fontSize="xxx-large" color="var(--app-title-font-shadow)" />
+      : <Spinner />
     }
   </PageContainer>
 }
