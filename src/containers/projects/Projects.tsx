@@ -1,11 +1,10 @@
 import { memo } from "react";
 import { PageContainer } from "../../components/page-container/PageContainer";
+import { WIPMessage } from "../../components/wip-message/WIPMessage";
 
 const ProjectsComponent = () => {
   return <PageContainer title="Projects">
-    <h3>
-      This page is a WIP. Coming soon!
-    </h3>
+    <WIPMessage />
   </PageContainer>
 }
 
