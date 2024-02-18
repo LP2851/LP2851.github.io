@@ -1,0 +1,32 @@
+[
+  {
+    "name": "lp2851.github.io",
+    "description": "A React app automatically deployed as a GitHub Pages site.",
+    "startDate": "Jan 2024",
+    "endDate": null,
+    "active": true,
+    "links": [
+      {
+        "name": "GitHub Repository",
+        "link": "https://github.com/LP2851/LP2851.github.io"
+      },
+      {
+        "name": "Live Website",
+        "link": "https://lp2851.github.io/"
+      }
+    ],
+    "technologies": [
+      "typescript",
+      "react",
+      "html",
+      "css",
+      "github pages",
+      "github actions",
+      "eslint"
+    ],
+    "keywords": [
+      "web development",
+      "ci/cd"
+    ]
+  }
+]

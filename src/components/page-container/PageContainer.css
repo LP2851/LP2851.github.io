@@ -1,0 +1,25 @@
+.page-container {
+  display: flex;
+  flex-flow: column;
+  justify-self: center;
+  align-items: center;
+
+  & > .card:first-child {
+    margin-top: 0;
+  }
+
+  & > .card {
+    width: 75%
+  }
+}
+
+.page-title {
+  --text-shadow-distance: 0.25rem;
+  color: var(--text-primary-color);
+  font-family: var(--app-title-font);
+  font-size: xxx-large;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: var(--text-shadow-distance) var(--text-shadow-distance)  var(--text-shadow-color);
+  padding-bottom: 1rem;
+}
