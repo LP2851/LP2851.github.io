@@ -16,6 +16,15 @@ export type Content = {
   };
 };
 
+export const shortDate = (dateStr: string) => {
+  const date = new Date(dateStr)
+  const monthNames = [
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"
+  ];
+  return `${monthNames[date.getMonth()]} ${date.getFullYear()}`
+}
+
 export const formattedDate = (dateStr: string) => {
   const date = new Date(dateStr)
   const day = date.getDate();

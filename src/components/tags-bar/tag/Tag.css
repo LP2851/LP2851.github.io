@@ -10,12 +10,44 @@
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
     cursor: pointer;
-    transition: background-color 100ms, color 100ms, font-weight;
+    transition: background-color 100ms, color 100ms, font-weight 100ms, border 100ms;
     box-shadow: var(--app-card-box-shadow);
 
     &:hover {
         background-color: var(--button-hover-background);
         color: var(--app-secondary-background);
         font-weight: bold;
+    }
+}
+
+.positive-tag {
+    background-color: var(--text-positive-color);
+    color: var(--app-primary-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+
+    &:hover {
+        background-color: var(--app-primary-background);
+        color: var(--text-positive-color);
+        font-weight: bold;
+        border: 1px solid var(--text-positive-color);
+    }
+}
+
+.negative-tag {
+    background-color: var(--text-negative-color);
+    color: var(--app-primary-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+
+    &:hover {
+        background-color: var(--app-primary-background);
+        color: var(--text-negative-color);
+        font-weight: bold;
+        border: 1px solid var(--text-negative-color);
     }
 }

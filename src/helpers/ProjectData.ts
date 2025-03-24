@@ -2,7 +2,7 @@
 export type ProjectData = {
   name: string;
   description: string;
-  startDate?: string;
+  startDate: string;
   endDate?: string;
   active: boolean;
   links: {

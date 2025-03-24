@@ -21,6 +21,7 @@
     "start": "vite preview",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {

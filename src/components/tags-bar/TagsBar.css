@@ -5,7 +5,7 @@
     
     & .tags-bar-title {
         font-size: 12px;
-        width: 3rem;
+        min-width: 3rem;
         align-items: center;
         display: flex;
         justify-content: flex-end;
