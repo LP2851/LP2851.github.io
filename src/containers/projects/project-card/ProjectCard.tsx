@@ -52,7 +52,7 @@ const ProjectCardComponent = ({ project: props }: Props) => {
               return (
                 <p>
                   <span className="link-name">{link.name}: </span>
-                  <a className="link" href={link.link}>
+                  <a className="link" href={link.link} target="_blank">
                     {link.link}
                   </a>
                 </p>

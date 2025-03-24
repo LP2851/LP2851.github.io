@@ -17,6 +17,19 @@
     display: flex;
     justify-content: space-between;
   }
+
+  .title {
+    --text-shadow-distance: 0.25rem;
+
+    margin: 0;
+    height: 100%;
+    padding-top: var(--margins-size);
+
+    font-family: var(--app-title-font);
+    text-shadow: var(--text-shadow-distance) var(--text-shadow-distance)
+      var(--app-title-font-shadow);
+    text-transform: uppercase;
+  }
 }
 
 .project-description {
