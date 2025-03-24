@@ -1,8 +1,8 @@
-import React from 'react';
 import { HashRouter, Link }from "react-router-dom";
 import { ThemeProvider } from "./context/theme/ThemeContext";
 import { Router } from "./components/router/Router";
 import { ROUTE_PATHS } from "./helpers/routes/RoutesHelper";
+import { JSX } from "react";
 import './App.css';
 
 const App = () => {

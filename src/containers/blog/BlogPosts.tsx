@@ -1,4 +1,4 @@
-import React, {memo, useEffect, useState} from "react";
+import {memo, useEffect, useState} from "react";
 import { Post } from "../../components/post/Post";
 import { Spinner } from "../../components/spinner/Spinner";
 import { PageContainer } from "../../components/page-container/PageContainer";
