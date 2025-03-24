@@ -1,6 +1,6 @@
-import {memo} from "react";
-import {Route, Routes} from "react-router-dom";
-import {ROUTES} from "../../helpers/routes/RoutesHelper";
+import { memo } from "react";
+import { Route, Routes } from "react-router-dom";
+import { ROUTES } from "../../helpers/routes/RoutesHelper";
 
 const RouterComponent = () => {
   return (

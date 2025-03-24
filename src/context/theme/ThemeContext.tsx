@@ -1,4 +1,10 @@
-import {createContext, PropsWithChildren, useContext, useEffect, useState,} from "react";
+import {
+  createContext,
+  PropsWithChildren,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import "./themes/dark.css";
 import "./themes/light.css";
 
@@ -60,4 +66,4 @@ const useTheme = () => {
 };
 
 // eslint-disable-next-line react-refresh/only-export-components
-export {ThemeProvider, useTheme};
+export { ThemeProvider, useTheme };

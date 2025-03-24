@@ -10,10 +10,11 @@
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   cursor: pointer;
-  transition: background-color 100ms,
-  color 100ms,
-  font-weight 100ms,
-  border 100ms;
+  transition:
+    background-color 100ms,
+    color 100ms,
+    font-weight 100ms,
+    border 100ms;
   box-shadow: var(--app-card-box-shadow);
 
   &:hover {

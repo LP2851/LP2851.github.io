@@ -1,7 +1,7 @@
-import {HashRouter, Link} from "react-router-dom";
-import {ThemeProvider} from "./context/theme/ThemeContext";
-import {Router} from "./components/router/Router";
-import {ROUTE_PATHS} from "./helpers/routes/RoutesHelper";
+import { HashRouter, Link } from "react-router-dom";
+import { ThemeProvider } from "./context/theme/ThemeContext";
+import { Router } from "./components/router/Router";
+import { ROUTE_PATHS } from "./helpers/routes/RoutesHelper";
 import "./App.css";
 
 const App = () => {

@@ -1,4 +1,4 @@
-import {memo} from "react";
+import { memo } from "react";
 import "./Tag.css";
 
 const TagComponent = (props: { tag: string }) => {

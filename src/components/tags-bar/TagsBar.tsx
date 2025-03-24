@@ -1,5 +1,5 @@
-import {memo} from "react";
-import {Tag} from "./tag/Tag";
+import { memo } from "react";
+import { Tag } from "./tag/Tag";
 import "./TagsBar.css";
 
 const TagsBarComponent = (props: { tags: string[]; barName?: string }) => {
@@ -9,7 +9,7 @@ const TagsBarComponent = (props: { tags: string[]; barName?: string }) => {
         {props.barName ? props.barName : "Tags"}:{" "}
       </p>
       {props.tags.map((tag) => (
-        <Tag tag={tag}/>
+        <Tag tag={tag} />
       ))}
     </div>
   );

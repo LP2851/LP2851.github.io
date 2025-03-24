@@ -1,4 +1,4 @@
-import {memo} from "react";
+import { memo } from "react";
 import "./Tag.css";
 
 const BooleanTagComponent = (props: { tag: string; bool: boolean }) => {

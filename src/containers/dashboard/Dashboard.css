@@ -20,7 +20,8 @@
   font-size: x-large;
   text-decoration: none;
   text-transform: uppercase;
-  text-shadow: var(--text-shadow-distance) var(--text-shadow-distance) var(--text-shadow-color);
+  text-shadow: var(--text-shadow-distance) var(--text-shadow-distance)
+    var(--text-shadow-color);
   border-radius: 8px;
 
   transition: text-shadow 100ms;
@@ -41,8 +42,9 @@
 }
 
 .dashboard-link-text {
-  transition: font-size 100ms,
-  color 100ms;
+  transition:
+    font-size 100ms,
+    color 100ms;
 }
 
 .dashboard-link-icon {
@@ -50,8 +52,9 @@
   overflow: hidden !important;
   font-size: 0;
   color: transparent;
-  transition: font-size 100ms,
-  color 100ms;
+  transition:
+    font-size 100ms,
+    color 100ms;
 }
 
 @media only screen and (max-width: 768px) {

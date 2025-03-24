@@ -89,7 +89,8 @@
   padding-top: var(--margins-size);
 
   font-family: var(--app-title-font);
-  text-shadow: var(--text-shadow-distance) var(--text-shadow-distance) var(--app-title-font-shadow);
+  text-shadow: var(--text-shadow-distance) var(--text-shadow-distance)
+    var(--app-title-font-shadow);
   text-transform: uppercase;
 }
 

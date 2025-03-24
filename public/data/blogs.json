@@ -18,9 +18,7 @@
         "textContent": "Just updated the site to use Vite instead of react-scripts since it was outdated."
       }
     },
-    "tags": [
-      "update"
-    ],
+    "tags": ["update"],
     "date": "2025-03-24"
   }
 ]

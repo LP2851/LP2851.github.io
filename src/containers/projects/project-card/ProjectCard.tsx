@@ -1,16 +1,16 @@
-import {memo} from "react";
-import {Card} from "../../../components/card/Card.tsx";
-import {ProjectData} from "../../../helpers/ProjectData.ts";
-import {TagsBar} from "../../../components/tags-bar/TagsBar.tsx";
-import {BooleanTag} from "../../../components/tags-bar/tag/BooleanTag.tsx";
+import { memo } from "react";
+import { Card } from "../../../components/card/Card.tsx";
+import { ProjectData } from "../../../helpers/ProjectData.ts";
+import { TagsBar } from "../../../components/tags-bar/TagsBar.tsx";
+import { BooleanTag } from "../../../components/tags-bar/tag/BooleanTag.tsx";
 import "./ProjectCard.css";
-import {shortDate} from "../../../helpers/PostData.ts";
+import { shortDate } from "../../../helpers/PostData.ts";
 
 type Props = {
   project: ProjectData;
 };
 
-const ProjectCardComponent = ({project: props}: Props) => {
+const ProjectCardComponent = ({ project: props }: Props) => {
   return (
     <div className="project-card">
       <Card>
@@ -18,9 +18,9 @@ const ProjectCardComponent = ({project: props}: Props) => {
           <h3 className="title">{props.name}</h3>
           <div className="info">
             {props.active ? (
-              <BooleanTag tag={"active"} bool={true}/>
+              <BooleanTag tag={"active"} bool={true} />
             ) : (
-              <BooleanTag tag={"inactive"} bool={false}/>
+              <BooleanTag tag={"inactive"} bool={false} />
             )}
 
             {props.endDate && (
@@ -37,10 +37,10 @@ const ProjectCardComponent = ({project: props}: Props) => {
         </div>
 
         {props.technologies.length > 0 && (
-          <TagsBar tags={props.technologies} barName="Technologies"/>
+          <TagsBar tags={props.technologies} barName="Technologies" />
         )}
         {props.keywords.length > 0 && (
-          <TagsBar tags={props.keywords} barName="Keywords"/>
+          <TagsBar tags={props.keywords} barName="Keywords" />
         )}
 
         <p className="project-description">{props.description}</p>
