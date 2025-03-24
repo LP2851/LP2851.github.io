@@ -1,4 +1,4 @@
-import React, {memo, useEffect, useState} from "react";
+import {memo, useEffect, useState} from "react";
 import { Post } from "../../components/post/Post";
 import { PostData } from "../../helpers/PostData";
 import { fetchJsonData } from "../../helpers/DataReader";

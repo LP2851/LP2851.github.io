@@ -1,7 +1,7 @@
 import { memo, PropsWithChildren } from "react";
 import "./Card.css"
 
-type Props = any;
+type Props = unknown;
 
 const CardComponent = (props: PropsWithChildren<Props>) => {
   return <div className="card">

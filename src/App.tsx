@@ -1,9 +1,9 @@
-import React from 'react';
 import { HashRouter, Link, Route, Routes } from "react-router-dom";
 import { Dashboard } from "./containers/dashboard/Dashboard";
 import { BlogPosts } from "./containers/blog/BlogPosts";
 import './App.css';
 import {ThemeProvider} from "./context/theme/ThemeContext";
+import { JSX } from "react";
 
 type RouteConfig = {
   path: string;
