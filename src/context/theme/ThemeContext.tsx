@@ -2,7 +2,7 @@ import {createContext, PropsWithChildren, useContext, useEffect, useState} from 
 import "./themes/dark.css";
 import "./themes/light.css";
 
-
+// eslint-disable-next-line react-refresh/only-export-components
 export enum Theme {
   DARK='dark',
   LIGHT='light',
@@ -54,4 +54,5 @@ const useTheme = () => {
 };
 
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { ThemeProvider, useTheme }
