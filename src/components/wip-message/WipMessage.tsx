@@ -2,15 +2,15 @@ import {memo} from "react";
 import {Card} from "../card/Card";
 import {Spinner} from "../spinner/Spinner";
 
-const WIPMessageComponent = () => {
+const WipMessageComponent = () => {
   return <Card>
-    <div style={{display: "flex", flexDirection: "column", alignItems: "center", width: "100%"}}>
+    <div>
       <h3>
-        This page is a Work in Progress.
+        This page is Work in Progress.
       </h3>
       <Spinner/>
     </div>
   </Card>
 }
 
-export const WIPMessage = memo(WIPMessageComponent);
+export const WipMessage = memo(WipMessageComponent);
