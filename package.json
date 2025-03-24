@@ -1,20 +1,20 @@
 {
   "name": "portfolio-app",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://lp2851.github.io",
   "private": true,
-  "type": "module",
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.4.2",
-    "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@testing-library/react": "^16.2.0",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.9",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^7.4.0"
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LP2851/LP2851.github.io.git"
   },
+  "author": "LP2851",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LP2851/LP2851.github.io/issues"
+  },
+  "type": "module",
   "scripts": {
     "predeploy": "npm run build",
     "dev": "vite",
@@ -23,23 +23,14 @@
     "lint": "eslint .",
     "deploy": "gh-pages -d build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@testing-library/react": "^16.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.4.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
@@ -55,16 +46,5 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0"
-  },
-  "description": "",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LP2851/LP2851.github.io.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LP2851/LP2851.github.io/issues"
   }
 }
