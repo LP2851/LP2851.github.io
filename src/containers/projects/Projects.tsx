@@ -4,6 +4,7 @@ import {fetchJsonData} from "../../helpers/DataReader.ts";
 import {Spinner} from "../../components/spinner/Spinner.tsx";
 import {ProjectData} from "../../helpers/ProjectData.ts";
 import {ProjectCard} from "./project-card/ProjectCard.tsx";
+import {WIPMessage} from "../../components/wip-message/WIPMessage.tsx";
 
 const PROJECTS_DATA_LOCATION = "/data/projects.json";
 
@@ -28,6 +29,7 @@ const ProjectsComponent = () => {
       ? projects.map((p) => <ProjectCard project={p}/>)
       : <Spinner/>
     }
+    <WIPMessage/>
   </PageContainer>
 }
 

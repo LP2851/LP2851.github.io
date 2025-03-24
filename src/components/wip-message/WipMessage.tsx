@@ -4,9 +4,9 @@ import {Spinner} from "../spinner/Spinner";
 
 const WIPMessageComponent = () => {
   return <Card>
-    <div>
+    <div style={{display: "flex", flexDirection: "column", alignItems: "center", width: "100%"}}>
       <h3>
-        This page is Work in Progress.
+        This page is a Work in Progress.
       </h3>
       <Spinner/>
     </div>
