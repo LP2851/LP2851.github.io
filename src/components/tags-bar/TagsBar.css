@@ -1,16 +1,16 @@
 .tags-bar {
-    width: 100%;
-    display: inline-flex;
-    flex-wrap: wrap;
-    
-    & .tags-bar-title {
-        font-size: 12px;
-        width: 3rem;
-        align-items: center;
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 0.5rem;
-        margin-bottom: 0.5rem;
-        font-weight: bold;
-    }
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  & .tags-bar-title {
+    font-size: 12px;
+    min-width: 3rem;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
 }

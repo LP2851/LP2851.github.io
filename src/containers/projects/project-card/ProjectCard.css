@@ -1,0 +1,42 @@
+.project-card > .card {
+  width: 80vw;
+
+  & > .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  & > .header > .title {
+    font-weight: bolder;
+    padding-bottom: 0.5rem;
+    margin: 0;
+  }
+
+  & > .header > .info {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.project-description {
+  font-size: medium;
+  text-align: left;
+}
+
+.project-links {
+  font-size: medium;
+  text-align: left;
+
+  & > h4 {
+    margin-top: 0;
+    font-weight: bold;
+  }
+
+  a,
+  a:visited,
+  a:hover,
+  a:active {
+    color: var(--text-positive-color);
+  }
+}

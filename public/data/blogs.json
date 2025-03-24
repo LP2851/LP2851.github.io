@@ -9,5 +9,16 @@
     },
     "tags": [],
     "date": "2024-02-02"
+  },
+  {
+    "title": "A small update",
+    "content": {
+      "type": "DEFAULT",
+      "data": {
+        "textContent": "Just updated the site to use Vite instead of react-scripts since it was outdated."
+      }
+    },
+    "tags": ["update"],
+    "date": "2025-03-24"
   }
 ]
