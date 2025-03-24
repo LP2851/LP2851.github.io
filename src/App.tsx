@@ -2,16 +2,18 @@ import {HashRouter, Link} from "react-router-dom";
 import {ThemeProvider} from "./context/theme/ThemeContext";
 import {Router} from "./components/router/Router";
 import {ROUTE_PATHS} from "./helpers/routes/RoutesHelper";
-import './App.css';
+import "./App.css";
 
 const App = () => {
   return (
-    <HashRouter >
+    <HashRouter>
       <ThemeProvider>
         <div className="App">
           <div className="App-container">
             <div className="App-header">
-              <Link to={ROUTE_PATHS.DASHBOARD} className="App-name">LUCAS PHILLIPS</Link>
+              <Link to={ROUTE_PATHS.DASHBOARD} className="App-name">
+                LUCAS PHILLIPS
+              </Link>
             </div>
             <Router />
           </div>
@@ -19,6 +21,6 @@ const App = () => {
       </ThemeProvider>
     </HashRouter>
   );
-}
+};
 
 export default App;

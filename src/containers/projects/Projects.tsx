@@ -14,23 +14,28 @@ const ProjectsComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const jsonData = await fetchJsonData(PROJECTS_DATA_LOCATION) as ProjectData[];
+        const jsonData = (await fetchJsonData(
+          PROJECTS_DATA_LOCATION,
+        )) as ProjectData[];
         setProjects(jsonData);
       } catch (error) {
-        console.error('Error fetching JSON data:', error);
+        console.error("Error fetching JSON data:", error);
       }
     };
 
     fetchData();
   }, []);
 
-  return <PageContainer title="Projects">
-    {projects.length !== 0
-      ? projects.map((p) => <ProjectCard project={p}/>)
-      : <Spinner/>
-    }
-    <WipMessage/>
-  </PageContainer>
-}
+  return (
+    <PageContainer title="Projects">
+      {projects.length !== 0 ? (
+        projects.map((p) => <ProjectCard project={p}/>)
+      ) : (
+        <Spinner/>
+      )}
+      <WipMessage/>
+    </PageContainer>
+  );
+};
 
 export const Projects = memo(ProjectsComponent);

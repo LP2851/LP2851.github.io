@@ -1,4 +1,3 @@
-
 export type ProjectData = {
   name: string;
   description: string;
@@ -11,4 +10,4 @@ export type ProjectData = {
   }[];
   technologies: string[];
   keywords: string[];
-}
+};

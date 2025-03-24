@@ -9,7 +9,7 @@
   }
 
   & > .card {
-    width: 75%
+    width: 75%;
   }
 }
 
@@ -20,6 +20,6 @@
   font-size: xxx-large;
   text-decoration: none;
   text-transform: uppercase;
-  text-shadow: var(--text-shadow-distance) var(--text-shadow-distance)  var(--text-shadow-color);
+  text-shadow: var(--text-shadow-distance) var(--text-shadow-distance) var(--text-shadow-color);
   padding-bottom: 1rem;
 }

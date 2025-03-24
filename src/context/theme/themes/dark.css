@@ -1,26 +1,26 @@
 .theme-dark {
-    --app-primary-background: #282c34;
-    --app-secondary-background: #1a1f26;
+  --app-primary-background: #282c34;
+  --app-secondary-background: #1a1f26;
 
-    --app-header-background: #1a1f26;
+  --app-header-background: #1a1f26;
 
-    --app-card-box-shadow: none;
-    --app-card-box-shadow-hover: none;
+  --app-card-box-shadow: none;
+  --app-card-box-shadow-hover: none;
 
-    --app-title-font-shadow: teal;
+  --app-title-font-shadow: teal;
 
-    --button-background: var(--app-primary-background);
-    --button-hover-background: #61dafb;
+  --button-background: var(--app-primary-background);
+  --button-hover-background: #61dafb;
 
-    --text-primary-color: white;
-    --text-alt-color: #1a1f26;
-    --text-link-color: #61dafb;
-    --text-shadow-color: teal;
+  --text-primary-color: white;
+  --text-alt-color: #1a1f26;
+  --text-link-color: #61dafb;
+  --text-shadow-color: teal;
 
-    --text-header-color: white;
+  --text-header-color: white;
 
-    --text-negative-color: tomato;
-    --text-positive-color: #61dafb;
+  --text-negative-color: tomato;
+  --text-positive-color: #61dafb;
 
-    --icon-default-color: teal;
+  --icon-default-color: teal;
 }
