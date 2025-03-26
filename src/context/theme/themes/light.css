@@ -6,6 +6,7 @@
 
   --app-card-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   --app-card-box-shadow-hover: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  --app-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   --app-title-font-shadow: teal;
 
@@ -23,4 +24,6 @@
   --text-positive-color: #61dafb;
 
   --icon-default-color: teal;
+
+  --grid-gap: 16px;
 }

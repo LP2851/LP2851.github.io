@@ -3,8 +3,9 @@ import { Card } from "../../../components/card/Card.tsx";
 import { ProjectData } from "../../../helpers/ProjectData.ts";
 import { TagsBar } from "../../../components/tags-bar/TagsBar.tsx";
 import { BooleanTag } from "../../../components/tags-bar/tag/BooleanTag.tsx";
-import "./ProjectCard.css";
 import { shortDate } from "../../../helpers/PostData.ts";
+import { ImageGrid } from "../../../components/image-grid/ImageGrid.tsx";
+import "./ProjectCard.css";
 
 type Props = {
   project: ProjectData;
@@ -44,6 +45,20 @@ const ProjectCardComponent = ({ project: props }: Props) => {
         )}
 
         <p className="project-description">{props.description}</p>
+
+        {/*{ props.images && props.images.length > 0 &&*/}
+        {/*  <div className="project-images">*/}
+        {/*    { props.images?.map((image) =>*/}
+        {/*      <img src={`${import.meta.env.BASE_URL}${image.src}`} alt={image.alt} />*/}
+        {/*    )}*/}
+        {/*  </div>*/}
+        {/*}*/}
+
+        {props.images && props.images.length > 0 && (
+          <div className="project-images">
+            <ImageGrid images={props.images} />
+          </div>
+        )}
 
         {props.links.length > 0 && (
           <div className="project-links">
