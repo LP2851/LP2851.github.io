@@ -1,31 +1,62 @@
 [
   {
     "name": "lp2851.github.io",
-    "description": "A React app automatically deployed as a GitHub Pages site.",
-    "startDate": "Jan 2024",
-    "endDate": null,
-    "active": true,
+    "auto": "https://raw.githubusercontent.com/LP2851/LP2851.github.io/refs/heads/main/.lp2581/project.json"
+  },
+  {
+    "name": "Tool-Assisted Moral and Ethical Simulations",
+    "description": "As part of my final year university group project, we developed a framework for studying human morality using AI-driven analysis. Participants engaged in VR simulations of classic moral dilemmas, such as the Trolley Problem, to enhance immersion and data validity. Our system then classified moral decision-making styles using machine learning, identifying patterns and constructing neural networks to categorise users.",
+    "startDate": "Sept 2021",
+    "endDate": "Apr 2022",
+    "active": false,
+    "links": [],
+    "technologies": [
+      "c#",
+      "unity",
+      "python",
+      "tensorflow",
+      "html",
+      "css",
+      "latex",
+      "git"
+    ],
+    "keywords": [
+      "game development",
+      "virtual reality",
+      "machine learning",
+      "shaders",
+      "rigging"
+    ],
+    "images": [
+      {
+        "src": "img/projects/tames/0.png",
+        "alt": "VR simulation of player pushing NPC off of a boat"
+      }
+    ]
+  },
+  {
+    "name": "Algorithm Demos",
+    "description": "A small learning project that provides short demonstrations of sorting and pathfinding algorithms on randomly generated data. This project includes: bubble sort, merge sort, quick sort, depth-first search, breadth-first search, Dijkstra's algorithm and A* search.",
+    "startDate": "Apr 2022",
+    "endDate": "May 2022",
+    "active": false,
     "links": [
       {
         "name": "GitHub Repository",
-        "link": "https://github.com/LP2851/LP2851.github.io"
-      },
-      {
-        "name": "Live Website",
-        "link": "https://lp2851.github.io/"
+        "link": "https://github.com/LP2851/Algorithm-Demos"
       }
     ],
-    "technologies": [
-      "typescript",
-      "react",
-      "vite",
-      "html",
-      "css",
-      "github pages",
-      "github actions",
-      "eslint",
-      "prettier"
-    ],
-    "keywords": ["frontend", "ci/cd"]
+    "technologies": ["python", "pygame"],
+    "keywords": ["sort algorithms", "search algorithms"],
+    "images": [
+      {
+        "src": "https://raw.githubusercontent.com/LP2851/Algorithm-Demos/refs/heads/main/images/a-star-complete.PNG",
+        "alt": "A* Algorithm Demo Complete Path"
+      },
+      {
+        "src": "https://raw.githubusercontent.com/LP2851/Algorithm-Demos/refs/heads/main/images/merge-sort-complete.PNG",
+        "alt": "Merge Sort Algorithm Demo Complete"
+      }
+    ]
   }
 ]

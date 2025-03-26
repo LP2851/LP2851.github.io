@@ -53,3 +53,7 @@
     color: var(--text-positive-color);
   }
 }
+
+.project-images {
+  width: calc(100% - 2rem);
+}

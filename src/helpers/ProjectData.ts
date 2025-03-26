@@ -1,4 +1,5 @@
 export type ProjectData = {
+  auto?: string;
   name: string;
   description: string;
   startDate: string;
@@ -10,4 +11,8 @@ export type ProjectData = {
   }[];
   technologies: string[];
   keywords: string[];
+  images?: {
+    src: string;
+    alt: string;
+  }[];
 };

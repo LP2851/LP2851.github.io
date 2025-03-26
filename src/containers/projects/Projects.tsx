@@ -14,9 +14,20 @@ const ProjectsComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const jsonData = (await fetchJsonData(
+        const rawData = (await fetchJsonData(
           PROJECTS_DATA_LOCATION,
         )) as ProjectData[];
+        const jsonData = await Promise.all(
+          rawData.map(async (data) => {
+            if (!data.auto) {
+              return data;
+            }
+            return {
+              ...data,
+              ...((await fetchJsonData(data.auto)) as ProjectData),
+            } as ProjectData;
+          }),
+        );
         setProjects(jsonData);
       } catch (error) {
         console.error("Error fetching JSON data:", error);
