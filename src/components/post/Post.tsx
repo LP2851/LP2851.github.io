@@ -2,7 +2,7 @@ import { memo } from "react";
 import { Card } from "../card/Card";
 import { TagsBar } from "../tags-bar/TagsBar";
 import { formattedDate } from "../../helpers/PostData";
-import { PostData } from "../../types/PostData"
+import { PostData } from "../../types/PostData";
 import { PostContent } from "./content/PostContent";
 import "./Post.css";
 

@@ -1,4 +1,3 @@
-
 export const shortDate = (dateStr: string) => {
   const date = new Date(dateStr);
   const monthNames = [
