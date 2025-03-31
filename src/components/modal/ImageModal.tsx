@@ -10,9 +10,7 @@ const ImageModalComponent = ({ src, onClose }: Props) => {
   if (!src) return null;
   return (
     <div className="modal" onClick={onClose}>
-      <div className="modal-content">
-        <img src={src} alt="Selected" />
-      </div>
+      <img src={src} alt="Selected" />
     </div>
   );
 };

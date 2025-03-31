@@ -2,7 +2,7 @@ import { memo, useEffect, useState } from "react";
 import { PageContainer } from "../../components/page-container/PageContainer";
 import { fetchJsonData } from "../../helpers/DataReader.ts";
 import { Spinner } from "../../components/spinner/Spinner.tsx";
-import { ProjectData } from "../../helpers/ProjectData.ts";
+import { ProjectData } from "../../types/ProjectData.ts";
 import { ProjectCard } from "./project-card/ProjectCard.tsx";
 import { WipMessage } from "../../components/wip-message/WipMessage.tsx";
 
@@ -38,7 +38,7 @@ const ProjectsComponent = () => {
   }, []);
 
   return (
-    <PageContainer title="Projects">
+    <PageContainer title="Personal Projects">
       {projects.length !== 0 ? (
         projects.map((p) => <ProjectCard project={p} />)
       ) : (

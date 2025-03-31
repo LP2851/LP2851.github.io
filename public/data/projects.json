@@ -1,13 +1,13 @@
 [
   {
-    "name": "lp2851.github.io",
+    "name": "LP2851 GitHub.io",
     "auto": "https://raw.githubusercontent.com/LP2851/LP2851.github.io/refs/heads/main/.lp2851/project.json"
   },
   {
     "name": "Tool-Assisted Moral and Ethical Simulations",
     "description": "As part of my final year university group project, we developed a framework for studying human morality using AI-driven analysis. Participants engaged in VR simulations of classic moral dilemmas, such as the Trolley Problem, to enhance immersion and data validity. Our system then classified moral decision-making styles using machine learning, identifying patterns and constructing neural networks to categorise users.",
-    "startDate": "Sept 2021",
-    "endDate": "Apr 2022",
+    "startDate": "2021-09-01",
+    "endDate": "2022-04-01",
     "active": false,
     "links": [],
     "technologies": [
@@ -37,8 +37,8 @@
   {
     "name": "Algorithm Demos",
     "description": "A small learning project that provides short demonstrations of sorting and pathfinding algorithms on randomly generated data. This project includes: bubble sort, merge sort, quick sort, depth-first search, breadth-first search, Dijkstra's algorithm and A* search.",
-    "startDate": "Apr 2022",
-    "endDate": "May 2022",
+    "startDate": "2022-04-01",
+    "endDate": "2022-05-01",
     "active": false,
     "links": [
       {

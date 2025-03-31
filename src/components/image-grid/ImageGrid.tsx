@@ -1,9 +1,10 @@
 import { memo, useState } from "react";
 import { ImageModal } from "../modal/ImageModal.tsx";
+import { ImageData } from "../../types/ProjectData.ts";
 import "./ImageGrid.css";
 
 interface Props {
-  images: { src: string; alt: string }[];
+  images: ImageData[];
 }
 
 const ImageGridComponent = (props: Props) => {
