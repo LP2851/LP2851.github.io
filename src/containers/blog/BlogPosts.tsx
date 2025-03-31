@@ -2,7 +2,7 @@ import { memo, useEffect, useState } from "react";
 import { Post } from "../../components/post/Post";
 import { Spinner } from "../../components/spinner/Spinner";
 import { PageContainer } from "../../components/page-container/PageContainer";
-import { PostData } from "../../helpers/PostData";
+import { PostData } from "../../types/PostData";
 import { fetchJsonData } from "../../helpers/DataReader";
 import "./BlogPosts.css";
 
