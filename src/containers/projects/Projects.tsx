@@ -38,7 +38,7 @@ const ProjectsComponent = () => {
   }, []);
 
   return (
-    <PageContainer title="Projects">
+    <PageContainer title="Personal Projects">
       {projects.length !== 0 ? (
         projects.map((p) => <ProjectCard project={p} />)
       ) : (
