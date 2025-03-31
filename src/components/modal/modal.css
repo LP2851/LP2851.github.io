@@ -11,13 +11,8 @@
   justify-content: center;
 }
 
-.modal-content {
-  max-width: 90%;
-  max-height: 90%;
-}
-
 .modal img {
-  width: 100%;
-  height: auto;
+  max-height: 90vh;
+  max-width: 90vw;
   border-radius: 8px;
 }
