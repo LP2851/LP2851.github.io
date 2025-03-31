@@ -1,3 +1,14 @@
+
+export type ImageData = {
+  src: string;
+  alt: string;
+};
+
+export type LinkData = {
+  name: string;
+  link: string;
+};
+
 export type ProjectData = {
   auto?: string;
   name: string;
@@ -5,14 +16,8 @@ export type ProjectData = {
   startDate: string;
   endDate?: string;
   active: boolean;
-  links: {
-    name: string;
-    link: string;
-  }[];
+  links: LinkData[];
   technologies: string[];
   keywords: string[];
-  images?: {
-    src: string;
-    alt: string;
-  }[];
+  images?: ImageData[];
 };
