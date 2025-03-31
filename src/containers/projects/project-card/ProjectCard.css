@@ -40,6 +40,7 @@
 .project-links {
   font-size: medium;
   text-align: left;
+  overflow-wrap: anywhere;
 
   & > h4 {
     margin-top: 0;
