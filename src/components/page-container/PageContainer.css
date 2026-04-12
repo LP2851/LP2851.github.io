@@ -1,26 +1,23 @@
 .page-container {
   display: flex;
   flex-flow: column;
-  justify-self: center;
   align-items: center;
-
-  & > .card:first-child {
-    margin-top: 0;
-  }
+  width: 100%;
+  padding: 0 0 5rem;
 
   & > .card {
-    width: 75%;
+    width: 80%;
   }
 }
 
 .page-title {
-  --text-shadow-distance: 0.25rem;
-  color: var(--text-primary-color);
   font-family: var(--app-title-font);
-  font-size: xxx-large;
-  text-decoration: none;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--text-primary-color);
   text-transform: uppercase;
-  text-shadow: var(--text-shadow-distance) var(--text-shadow-distance)
-    var(--text-shadow-color);
-  padding-bottom: 1rem;
+  margin: 2.5rem 0 1.75rem;
+  padding: 0;
+  text-align: center;
 }

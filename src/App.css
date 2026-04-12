@@ -1,97 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
 .App {
-  /*--app-background: #282c34;*/
-  /*--card-background: #1a1f26;*/
+  --nav-height: 64px;
   --side-margins: 2rem;
-  --app-title-font: "Black Ops One";
-  /*--app-title-font-shadow: teal;*/
-  /*--button-hover-background: #61dafb;*/
-  --header-height: 5.75rem;
+  --app-title-font: "Syne", sans-serif;
+  --body-font: "DM Sans", sans-serif;
+  --mono-font: "JetBrains Mono", monospace;
 
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--body-font);
   text-align: center;
   background-color: var(--app-primary-background);
   color: var(--text-primary-color);
   max-width: 100vw;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: var(--app-header-background);
-  width: 100%;
-  padding: calc(var(--side-margins) / 2) 0 calc(var(--side-margins) / 2) 2rem;
-  display: inline-flex;
-  color: var(--text-header-color);
-  max-height: var(--header-height);
-}
-
-.App-name {
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-
-  color: var(--text-header-color);
-  font-family: var(--app-title-font), serif;
-  font-size: xxx-large;
-  text-decoration: none;
-  text-shadow: 0.5rem 0.5rem var(--app-title-font-shadow);
-
-  transition: text-shadow 100ms;
-
-  &:hover {
-    text-shadow: -0.5rem -0.5rem var(--app-title-font-shadow);
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  /* Desktop */
-  .App-route {
-    /*width: calc(100vw - var(--side-margins));*/
-    /*margin-right: auto;*/
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  /* Phone */
-  .App-route {
-    width: 100%;
-  }
-
-  .card {
-    margin: calc(var(--side-margins) / 2) 0;
-    min-height: auto;
-  }
-
-  .App-name {
-    font-size: xx-large;
-  }
-
-  .page-title {
-    font-size: xx-large;
-  }
-}
-
-.App-route {
-  margin-top: var(--side-margins);
-  /*margin-left: var(--side-margins);*/
-  /*margin-right: var(--side-margins);*/
-}
-
-.page-title {
-  margin: 0;
-  height: 100%;
-  padding-top: var(--margins-size);
-
-  font-family: var(--app-title-font);
-  text-shadow: var(--text-shadow-distance) var(--text-shadow-distance)
-    var(--app-title-font-shadow);
-  text-transform: uppercase;
 }
 
 .App-container {
@@ -100,12 +18,125 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: calc(10px + 2vmin);
   color: var(--text-primary-color);
   max-width: 100vw;
   overflow-x: hidden;
 }
 
+/* === NAV === */
+.App-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--app-header-background);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.App-name {
+  font-family: var(--app-title-font);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: linear-gradient(
+    135deg,
+    var(--text-primary-color) 0%,
+    var(--accent-blue-light) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.72;
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-link {
+  font-family: var(--body-font);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary-color);
+  text-decoration: none;
+  padding: 0.45rem 0.85rem;
+  border-radius: 6px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  letter-spacing: 0.01em;
+
+  &:hover {
+    color: var(--text-primary-color);
+    background-color: var(--border-subtle);
+  }
+
+  &.nav-link--active {
+    color: var(--accent-blue-light);
+    background-color: var(--accent-glow);
+  }
+
+  &.nav-link--external {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+}
+
+.theme-toggle {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--text-secondary-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  transition: color 0.2s ease, border-color 0.2s ease,
+    background-color 0.2s ease;
+
+  &:hover {
+    color: var(--accent-blue-light);
+    border-color: var(--accent-blue);
+    background-color: var(--accent-glow);
+  }
+}
+
+.App-route {
+  width: 100%;
+  padding-top: var(--nav-height);
+}
+
 .App-link {
   color: var(--text-link-color);
+}
+
+@media only screen and (max-width: 768px) {
+  .App-header {
+    padding: 0 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+  }
 }

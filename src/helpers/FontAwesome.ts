@@ -7,6 +7,11 @@ import {
   faSpinner,
   faThumbsUp,
   faUser,
+  faSun,
+  faMoon,
+  faChevronDown,
+  faArrowRight,
+  faCode,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const initFontAwesomeLibrary = () => {
@@ -18,5 +23,10 @@ export const initFontAwesomeLibrary = () => {
     faExternalLink,
     faThumbsUp,
     faSpinner,
+    faSun,
+    faMoon,
+    faChevronDown,
+    faArrowRight,
+    faCode,
   );
 };
