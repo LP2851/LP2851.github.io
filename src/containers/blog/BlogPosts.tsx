@@ -26,13 +26,16 @@ const PostsContainer = () => {
         console.error("Error fetching JSON data:", error);
       }
     };
-
     fetchData();
   }, []);
 
   return (
-    <PageContainer title="Blogs">
-      {posts.length !== 0 ? posts.map((p) => <Post post={p} />) : <Spinner />}
+    <PageContainer title="Blog">
+      {posts.length !== 0 ? (
+        posts.map((p) => <Post key={p.title} post={p} />)
+      ) : (
+        <Spinner />
+      )}
     </PageContainer>
   );
 };

@@ -4,6 +4,15 @@
     "auto": "https://raw.githubusercontent.com/LP2851/LP2851.github.io/refs/heads/main/.lp2851/project.json"
   },
   {
+    "name": "Discord Bots",
+    "description": "A collection of Discord bots built for various purposes including automation, moderation, and community tooling.",
+    "startDate": "2025-12-01",
+    "active": true,
+    "links": [],
+    "technologies": ["python", "discord.py"],
+    "keywords": ["discord", "bots", "automation"]
+  },
+  {
     "name": "Tool-Assisted Moral and Ethical Simulations",
     "description": "As part of my final year university group project, we developed a framework for studying human morality using AI-driven analysis. Participants engaged in VR simulations of classic moral dilemmas, such as the Trolley Problem, to enhance immersion and data validity. Our system then classified moral decision-making styles using machine learning, identifying patterns and constructing neural networks to categorise users.",
     "startDate": "2021-09-01",

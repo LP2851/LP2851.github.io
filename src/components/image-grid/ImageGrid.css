@@ -1,29 +1,35 @@
 .image-grid-container {
-  padding: 16px;
-  margin-bottom: 1em;
-  background-color: var(--app-primary-background);
-  border-radius: 8px;
-  box-shadow: var(--app-box-shadow);
+  padding: 0;
+  margin-bottom: 0.5em;
   width: 100%;
 }
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(100% / 5), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--grid-gap);
 }
 
 .image-item {
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--app-primary-background);
 }
 
 .image-item img {
-  max-width: 100%;
+  width: 100%;
   max-height: 300px;
-  width: auto;
-  aspect-ratio: 3 / 2;
-
   object-fit: cover;
   border-radius: 8px;
   box-shadow: var(--app-box-shadow);
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 }

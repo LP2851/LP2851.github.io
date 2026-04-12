@@ -1,19 +1,29 @@
 .post-header {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .post-title {
-  font-weight: bolder;
-  padding-bottom: 0.5rem;
+  font-family: var(--app-title-font);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary-color);
+  letter-spacing: -0.01em;
   margin: 0;
+  text-align: left;
 }
 
 .post-date {
-  padding-top: 0.25rem;
+  font-family: var(--mono-font);
+  font-size: 0.75rem;
+  color: var(--text-muted-color);
   margin: 0;
-  font-style: italic;
-  font-size: large;
-  font-weight: lighter;
+  white-space: nowrap;
+  padding-top: 0.2rem;
+  font-style: normal;
+  font-weight: 400;
 }

@@ -1,8 +1,5 @@
 import { memo } from "react";
-import { Card } from "../../../components/card/Card.tsx";
 import { ProjectData } from "../../../types/ProjectData.ts";
-import { TagsBar } from "../../../components/tags-bar/TagsBar.tsx";
-import { BooleanTag } from "../../../components/tags-bar/tag/BooleanTag.tsx";
 import { shortDate } from "../../../helpers/PostData.ts";
 import { ImageGrid } from "../../../components/image-grid/ImageGrid.tsx";
 import "./ProjectCard.css";
@@ -14,37 +11,43 @@ type Props = {
 const ProjectCardComponent = ({ project: props }: Props) => {
   return (
     <div className="project-card">
-      <Card>
-        <div className="header">
-          <h3 className="title">{props.name}</h3>
-          <div className="info">
-            {props.active ? (
-              <BooleanTag tag={"active"} bool={true} />
-            ) : (
-              <BooleanTag tag={"inactive"} bool={false} />
-            )}
-
-            {props.endDate && (
-              <p className="post-date">
-                {shortDate(props.startDate)} - {shortDate(props.endDate)}
-              </p>
-            )}
-            {!props.endDate && (
-              <p className="post-date">
-                {shortDate(props.startDate)} - Present
-              </p>
-            )}
+      <div className="project-card-inner">
+        <div className="project-card-top">
+          <div className="project-meta">
+            <span
+              className={`project-status ${
+                props.active
+                  ? "project-status--active"
+                  : "project-status--inactive"
+              }`}
+            >
+              {props.active ? "Active" : "Inactive"}
+            </span>
+            <span className="project-dates">
+              {shortDate(props.startDate)} —{" "}
+              {props.endDate ? shortDate(props.endDate) : "Present"}
+            </span>
           </div>
+          <h3 className="project-title">{props.name}</h3>
+          {props.description && (
+            <p className="project-description">{props.description}</p>
+          )}
         </div>
 
-        {props.technologies.length > 0 && (
-          <TagsBar tags={props.technologies} barName="Technologies" />
+        {(props.technologies?.length > 0 || props.keywords?.length > 0) && (
+          <div className="project-tags">
+            {props.technologies?.map((tech) => (
+              <span key={tech} className="project-tech-tag">
+                {tech}
+              </span>
+            ))}
+            {props.keywords?.map((kw) => (
+              <span key={kw} className="project-keyword-tag">
+                {kw}
+              </span>
+            ))}
+          </div>
         )}
-        {props.keywords.length > 0 && (
-          <TagsBar tags={props.keywords} barName="Keywords" />
-        )}
-
-        <p className="project-description">{props.description}</p>
 
         {props.images && props.images.length > 0 && (
           <div className="project-images">
@@ -52,22 +55,23 @@ const ProjectCardComponent = ({ project: props }: Props) => {
           </div>
         )}
 
-        {props.links.length > 0 && (
+        {props.links?.length > 0 && (
           <div className="project-links">
-            <h4>Related Links</h4>
-            {props.links.map((link) => {
-              return (
-                <p>
-                  <span className="link-name">{link.name}: </span>
-                  <a className="link" href={link.link} target="_blank">
-                    {link.link}
-                  </a>
-                </p>
-              );
-            })}
+            {props.links.map((link) => (
+              <a
+                key={link.link}
+                className="project-link"
+                href={link.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.name}
+                <span className="project-link-arrow">↗</span>
+              </a>
+            ))}
           </div>
         )}
-      </Card>
+      </div>
     </div>
   );
 };

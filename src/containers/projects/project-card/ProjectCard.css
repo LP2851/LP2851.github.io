@@ -1,60 +1,154 @@
-.project-card > .card {
-  width: 80vw;
+.project-card {
+  width: 80%;
+  margin-bottom: 1.25rem;
+}
 
-  & > .header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+.project-card-inner {
+  background-color: var(--app-secondary-background);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 1.75rem 2rem;
+  text-align: left;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    border-color: var(--border-default);
+    box-shadow: var(--app-card-box-shadow-hover);
+    transform: translateY(-2px);
   }
+}
 
-  & > .header > .title {
-    font-weight: bolder;
-    padding-bottom: 0.5rem;
-    margin: 0;
-  }
+.project-card-top {
+  margin-bottom: 1.25rem;
+}
 
-  & > .header > .info {
-    display: flex;
-    justify-content: space-between;
-  }
+.project-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.8rem;
+}
 
-  .title {
-    --text-shadow-distance: 0.25rem;
+.project-status {
+  font-family: var(--mono-font);
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.22rem 0.6rem;
+  border-radius: 5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
 
-    margin: 0;
-    height: 100%;
-    padding-top: var(--margins-size);
+.project-status--active {
+  color: #34d399;
+  background-color: rgba(52, 211, 153, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+}
 
-    font-family: var(--app-title-font);
-    text-shadow: var(--text-shadow-distance) var(--text-shadow-distance)
-      var(--app-title-font-shadow);
-    text-transform: uppercase;
-  }
+.project-status--inactive {
+  color: var(--text-muted-color);
+  background-color: var(--border-subtle);
+  border: 1px solid var(--border-subtle);
+}
+
+.project-dates {
+  font-family: var(--mono-font);
+  font-size: 0.78rem;
+  color: var(--text-muted-color);
+}
+
+.project-title {
+  font-family: var(--app-title-font);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary-color);
+  letter-spacing: -0.01em;
+  margin: 0 0 0.6rem;
 }
 
 .project-description {
-  font-size: medium;
-  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.72;
+  color: var(--text-secondary-color);
+  margin: 0;
 }
 
-.project-links {
-  font-size: medium;
-  text-align: left;
-  overflow-wrap: anywhere;
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
 
-  & > h4 {
-    margin-top: 0;
-    font-weight: bold;
-  }
+.project-tech-tag {
+  font-family: var(--mono-font);
+  font-size: 0.73rem;
+  color: var(--accent-blue-light);
+  background-color: var(--accent-glow);
+  border: 1px solid var(--border-default);
+  border-radius: 5px;
+  padding: 0.23rem 0.58rem;
+}
 
-  a,
-  a:visited,
-  a:hover,
-  a:active {
-    color: var(--text-positive-color);
-  }
+.project-keyword-tag {
+  font-family: var(--mono-font);
+  font-size: 0.73rem;
+  color: var(--text-secondary-color);
+  background-color: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: 5px;
+  padding: 0.23rem 0.58rem;
 }
 
 .project-images {
-  width: calc(100% - 2rem);
+  margin-bottom: 1.25rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1.25rem;
+  margin-top: 1rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--mono-font);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent-blue-light);
+  text-decoration: none;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border-default);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: var(--accent-glow);
+    border-color: var(--accent-blue);
+    transform: translateY(-1px);
+  }
+}
+
+.project-link-arrow {
+  font-size: 0.88rem;
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 768px) {
+  .project-card {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .project-card-inner {
+    padding: 1.25rem;
+  }
 }
